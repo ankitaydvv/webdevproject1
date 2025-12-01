@@ -1,0 +1,197 @@
+/* Google font */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f8f9fc;
+    color: #222;
+}
+
+/* Variables */
+:root {
+    --primary: #4f46e5;
+    --dark: #111;
+    --light: #fff;
+}
+
+/* NAVBAR */
+header {
+    background: var(--light);
+    padding: 15px 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(#4f46e5aa, #4f46e5aa), url('images/hero.jpg');
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--light);
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Generic button */
+.btn {
+    background: var(--primary);
+    color: var(--light);
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #332fd0;
+}
+
+/* Section base */
+.section {
+    padding: 60px 40px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Testimonials */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Pricing */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.price-card {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price-card.featured {
+    border: 3px solid var(--primary);
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVENESS */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .grid, .testimonial-grid, .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .grid, .testimonial-grid, .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
